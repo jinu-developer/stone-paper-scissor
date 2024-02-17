@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-area">
+        <div>
+          <h1
+            style="
+              color: white;
+              letter-spacing: 3px;
+              font-weight: 800;
+              font-size: 40px;
+              line-height: 1.2;
+            "
+          >
+            ROCK <br />
+            PAPER <br />
+            SCISSORS
+          </h1>
+        </div>
+
+        <div class="content-scores">
+          <div class="content-scores-area">
+            <h5 style="color: gray; font-size: 18px">
+              Computer <br />
+              Score
+            </h5>
+            <p style="font-size: 50px">
+              <strong id="my_score">0</strong>
+            </p>
+          </div>
+          <div class="content-scores-area">
+            <h5 style="color: gray; font-size: 18px">
+              Your <br />
+              Score
+            </h5>
+            <p style="font-size: 50px">
+              <strong id="comp_score">0</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="game_area" class="game-area">
+        <div
+          style="
+            display: flex;
+            gap: 6rem;
+            align-items: center;
+            position: relative;
+          "
+        >
+          <div
+            class="div-image-container"
+            style="border: 15px solid #0175b6; z-index: 20"
+            id="rock"
+          >
+            <img src="rock.svg" alt="" />
+          </div>
+
+          <p class="game-lines"></p>
+
+          <div
+            class="div-image-container"
+            style="border: 15px solid #bd01fe; z-index: 20"
+            id="scissors"
+          >
+            <img src="scissors.svg" alt="" />
+          </div>
+        </div>
+
+        <p
+          class="game-lines"
+          style="transform: rotate(-60deg) translateY(9rem) translateX(-9rem)"
+        ></p>
+        <p
+          class="game-lines"
+          style="transform: rotate(60deg) translateY(9rem) translateX(9rem)"
+        ></p>
+        <div
+          class="div-image-container"
+          style="border: 15px solid #fea942; z-index: 20"
+          id="paper"
+        >
+          <img src="paper.svg" alt="" />
+        </div>
+      </div>
+
+      <div id="game_decesion" class="game-decesion" style="display: none">
+        <div style="position: relative">
+          <p>YOU PICKED</p>
+          <div id="user_won">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+          </div>
+          <div
+            class="div-image-container"
+            style="border: 15px solid #bd01fe; z-index: 20"
+            id="scissors"
+          >
+            <img id="img1" src="scissors.svg" alt="" />
+          </div>
+        </div>
+
+        <div>
+          <p style="font-size: 44px; font-weight: 800; margin: 0">YOU WIN</p>
+          <p style="font-size: 28px; font-weight: 700">AGAINST PC</p>
+          <button id="play_again_btn" type="button">PLAY AGAIN</button>
+        </div>
+
+        <div style="position: relative">
+          <p>PC PICKED</p>
+          <div id="comp_won">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+          </div>
+          <div
+            class="div-image-container"
+            style="border: 15px solid #fea942; z-index: 20"
+            id="paper"
+          >
+            <img id="img2" src="paper.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="rules-area">
+        <div id="game_rules_content">
+          <div
+            class="cross-icon"
+            type="button"
+            onclick="document.getElementById('game_rules_content').style.visibility='hidden'"
+          >
+            X
+          </div>
+
+          <div class="rules-absolute-container">
+            <h4 style="font-size: 28px; text-align: center; color: white">
+              Game Rules
+            </h4>
+
+            <ul>
+              <li>
+                Rock beats scissors, scissors beat paper, and paper beats rock.
+              </li>
+              <li>
+                Agree ahead of time whether you'll count off "rock, paper,
+                scissors, shoot" or just "rock, paper, scissors."
+              </li>
+              <li>
+                Use rock, paper, scissors to settle minor decesions or simply
+                play to pass the time.
+              </li>
+              <li>
+                If both players lay down the same hand, each player lays down
+                another hand.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          id="rules_btn"
+          onclick="document.getElementById('game_rules_content').style.visibility=''"
+        >
+          <p class="rules-text">RULES</p>
+        </div>
+
+        <a href="hurray.html" style="text-decoration: none">
+          <div
+            id="next_btn"
+            style="display: none; margin-left: 1rem; cursor: pointer"
+          >
+            <p class="rules-text">NEXT</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

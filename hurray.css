@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 4rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #8cc461;
+  font-family: "Nunito", sans-serif;
+}
+
+#play_again_btn {
+  background-color: white;
+  padding: 0.8rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  color: gray;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.rules-area {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.cross-icon {
+  color: white;
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 900;
+  border-radius: 50%;
+  border: 6px solid white;
+  padding: 1.4rem;
+  position: absolute;
+  right: -10px;
+  top: -430px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.rules-absolute-container {
+  position: absolute;
+  bottom: 70px;
+  right: 10px;
+  width: 350px;
+  background-color: #014428;
+  color: white;
+  padding: 1rem 1rem 1rem 2rem;
+  border: 8px solid white;
+  border-radius: 16px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -25px;
+  padding-top: 1rem;
+}
+
+li::before {
+  content: "■ ";
+  color: yellow;
+  margin-right: 10px;
+}
+
+.rules-text {
+  text-align: end;
+  border: 2px solid white;
+  padding: 0.5rem 1.6rem;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#rules_btn {
+  cursor: pointer;
+}
